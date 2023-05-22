@@ -1,15 +1,8 @@
 const path = require("path");
 
-// Use the existing order data
 const orders = require(path.resolve("src/data/orders-data"));
 
-// Use the existing dish data
-//const dishes = require(path.resolve("src/data/dishes-data"));
-
-// Use this function to assigh ID's when necessary
 const nextId = require("../utils/nextId");
-
-// TODO: Implement the /orders handlers needed to make the tests pass
 
 // POST
 function create(req, res) {
