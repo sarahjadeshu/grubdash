@@ -70,6 +70,7 @@ function dishExists(req, res, next) {
   const dishId = req.params.dishId;
   const foundDish = dishes.find((dish) => (dish.id = dishId));
   if (foundDish) {
+    res.locals.dish = foundDish;
     return next();
   }
   next({
