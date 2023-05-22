@@ -1,12 +1,9 @@
 const path = require("path");
 
-// Use the existing dishes data
 const dishes = require(path.resolve("src/data/dishes-data"));
 
-// Use this function to assign ID's when necessary
 const nextId = require("../utils/nextId");
 
-// TODO: Implement the /dishes handlers needed to make the tests pass
 
 // POST
 function create(req, res) {
@@ -117,11 +114,6 @@ function update(req, res, next) {
   foundDish.image_url = image_url;
   
   res.json({ data: foundDish });
-//   if (id !== dishId) {
-//     res.json({ data: foundDish }).next({ status: 400, message: `Dish id does not match route id. Dish: ${id}, Route: ${dishId}` })
-//   } else {
-//     res.json({ data: foundDish });
-//   }
 }
 
 module.exports = {
