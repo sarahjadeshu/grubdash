@@ -110,6 +110,7 @@ function orderExists(req, res, next) {
   const orderId = Number(req.params.orderId);
   const foundOrder = orders.find((order) => (order.id = orderId));
   if (foundOrder) {
+    res.locals.order = foundOrder;
     return next();
   }
   next({
